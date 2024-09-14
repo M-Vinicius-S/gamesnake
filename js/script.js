@@ -56,11 +56,11 @@ const drawFood = () => {
 }
 
 const drawSnake = () => {
-    ctx.fillStyle = "#ddd"
+    ctx.fillStyle = "#3a6604"
 
     snake.forEach((position, index) => {
         if (index == snake.length - 1) {
-            ctx.fillStyle = "white"
+            ctx.fillStyle = "green"
         }
         ctx.fillRect(position.x, position.y, size, size)
     })
@@ -173,7 +173,7 @@ const gameLoop = () => {
     loopId = setTimeout(() => {
         gameLoop()
 
-    }, 300)
+    }, 150)
 }
 
 gameLoop()
